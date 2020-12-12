@@ -55,14 +55,8 @@ function getRegexForGuid() {
  *
  */
 function getRegexForPitSpot() {
-  // eslint-disable-next-line no-useless-escape
-  // eslint-disable-next-line quotes
-  // eslint-disable-next-line no-useless-escape
-  // eslint-disable-next-line quotes
-  return new RegExp(`(?:spot|spate|slap two|respite|pit)(^\s'){0,12}`);
+  return new RegExp(/\w+[ip ]\w+/);
 }
-
-
 /**
  * Returns the password validator regex.
  * Regex will validate a password to make sure it meets the follwing criteria:

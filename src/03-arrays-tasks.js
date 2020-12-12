@@ -36,13 +36,12 @@ function findElement(arr, value) {
  *    2 => [ 1, 3 ]
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
-function generateOdds(/* len */) {
-  // const arr = [];
-  // for (let i = 1; i < len; i += 1) {
-  //   arr.push(i);
-  // }
-  // return arr;
-  throw new Error('Not implemented');
+function generateOdds(len) {
+  let numbers = -1;
+  // eslint-disable-next-line no-return-assign
+  const filledArray = new Array(len).fill(null).map(() => (numbers % 2 !== 0 ? (numbers,
+  numbers += 2) : (numbers += 2)));
+  return filledArray;
 }
 
 
@@ -58,8 +57,9 @@ function generateOdds(/* len */) {
  *    [0, 1, 2, 3, 4, 5] => [0, 1, 2, 3, 4, 5,   0, 1, 2, 3, 4, 5]
  *    [] => []
  */
-function doubleArray(/* arr */) {
-  throw new Error('Not implemented');
+function doubleArray(arr) {
+  const numbersCopy = arr.slice();
+  return arr.concat(numbersCopy);
 }
 
 
